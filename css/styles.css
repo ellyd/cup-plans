@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@font-face {
+	font-family: "Miso";
+	src: url(../fonts/miso-bold.otf);
+} 
+
+@font-face {
+	font-family: "Miso";
+	src: url(../fonts/miso-regular.otf);
+}
+	
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	font-family: "Miso", Arial, sans-serif;
+	background: #fdde7e;
+}
+
+.container {
+	width: 1140px;
+	height: 510px;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	margin: 70px auto;
+	align-items: center; 
+}
+
+.item {
+	flex-basis: 25%;
+	height: 445px;
+	background-color: #fff;
+	justify-content: center;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+	transition: all .25s linear;
+}
+
+.item:hover,
+.item:focus,
+.item:active {
+	flex-basis: 27%;
+	height: 450px;
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .6);
+}
+
+.item-big:hover,
+.item-big:focus,
+.item-big:active {
+	flex-basis: 27%;
+	height: 515px;
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .6);
+}
+
+.item:not(:last-of-type) {
+	margin-right: 25px;
+}
+
+.item-big {
+	display: inline-block;
+	height: 505px;
+	padding: 35px 0 50px;
+}
+
+.item__title {
+	font-size: 56px;
+	margin: 20px 0;
+}
+
+.item__title-big {
+	margin: 20px 0 30px;
+}
+
+.item__subtitle {
+	font-family: "Lato", Arial, sans-serif;
+	width: 155px;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0 auto;
+}
+
+.item__price {
+	font-size: 70px;
+	font-weight: bold;
+	margin: 20px 0 20px;
+	color: #02995b;
+}
+
+.item__price-big {
+	margin: 0 0 40px;
+}
+
+.item__price:before {
+	content: attr(data-currency);
+	margin-right: 5px;
+}
